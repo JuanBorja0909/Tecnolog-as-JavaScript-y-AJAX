@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX – Tecnologías Web</title>
+<style>
+    body { font-family: Arial; margin: 40px; }
+    textarea { width: 100%; height: 100px; }
+    .box { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+</style>
+</head>
+
+<body>
+
+<h2>AJAX – Visualización de contenido</h2>
+
+<label>URL:</label>
+<input type="text" id="url" style="width:100%; margin-bottom:10px;">
+
+<button onclick="cargarContenido()">Mostrar Contenidos</button>
+
+<h3>Contenidos</h3>
+<div id="contenidos" class="box"></div>
+
+<h3>Estados de la petición</h3>
+<div id="estados" class="box"></div>
+
+<h3>Cabeceras HTTP de la respuesta</h3>
+<div id="cabeceras" class="box"></div>
+
+<h3>Código de estado</h3>
+<div id="codigo" class="box"></div>
+
+<script src="ajax.js"></script>
+</body>
+</html>
