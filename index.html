@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>AJAX – Tecnologías Web</title>
+<title>Tecnologías JavaScript y AJAX</title>
 <style>
-    body { font-family: Arial; margin: 40px; }
-    textarea { width: 100%; height: 100px; }
-    .box { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+body{font-family:Arial;margin:40px;background:#f7f7f7;}
+.section{background:#fff;padding:20px;border-radius:8px;margin:20px 0;box-shadow:0 0 8px rgba(0,0,0,0.1);}
+button{padding:10px 18px;margin:5px 0;cursor:pointer;}
+#resultado{background:#eee;padding:10px;border-radius:5px;white-space:pre-wrap;}
+.box{background:#eee;padding:10px;border-radius:5px;white-space:pre-wrap;}
 </style>
+<script src="script.js"></script>
 </head>
-
 <body>
+<h1>Práctica – Tecnologías JavaScript y AJAX</h1>
 
-<h2>AJAX – Visualización de contenido</h2>
+<div class="section">
+<h2>Ejercicios JavaScript</h2>
+<button onclick="ej1()">Ejercicio 1 – Palíndromo</button><br>
+<button onclick="ej2()">Ejercicio 2 – Número mayor</button><br>
+<button onclick="ej3()">Ejercicio 3 – Vocales encontradas</button><br>
+<button onclick="ej4()">Ejercicio 4 – Conteo de vocales</button>
+<h3>Resultado:</h3>
+<div id="resultado"></div>
+</div>
 
+<div class="section">
+<h2>AJAX</h2>
 <label>URL:</label>
-<input type="text" id="url" style="width:100%; margin-bottom:10px;">
+<input id="url" style="width:100%;padding:8px"><br><br>
+<button onclick="cargarAjax()">Mostrar contenidos</button>
+<h3>Contenidos</h3><div id="ajax_contenidos" class="box"></div>
+<h3>Estados</h3><div id="ajax_estados" class="box"></div>
+<h3>Cabeceras</h3><div id="ajax_cabeceras" class="box"></div>
+<h3>Código de Estado</h3><div id="ajax_codigo" class="box"></div>
+</div>
 
-<button onclick="cargarContenido()">Mostrar Contenidos</button>
-
-<h3>Contenidos</h3>
-<div id="contenidos" class="box"></div>
-
-<h3>Estados de la petición</h3>
-<div id="estados" class="box"></div>
-
-<h3>Cabeceras HTTP de la respuesta</h3>
-<div id="cabeceras" class="box"></div>
-
-<h3>Código de estado</h3>
-<div id="codigo" class="box"></div>
-
-<script src="ajax.js"></script>
 </body>
 </html>
